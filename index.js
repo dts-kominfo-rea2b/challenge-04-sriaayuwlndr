@@ -24,17 +24,17 @@ const dates = [
 
             resultAll[i] = resultAll[i]/1000; //second
 
-            result[i] = resultAll[i];
+            result[i] = resultAll[i].toString();
         }
 
-        return "'"+result.join("-")+"'";
+        return result.join("-");
     }
 
     else
     {
         // return data[posisi]/1000;
 
-        return "'"+Date.parse(data[posisi])/1000+"'";
+        return (Date.parse(data[posisi])/1000).toString();
     }
   }
   
