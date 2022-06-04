@@ -10,8 +10,8 @@ const dates = [
   
   
   // TODO: Buatlah fungsi createDate
-  const createDate = (data, posisi) => {
-    let panjangData = data.length;
+  const createDate = (dates, posisi) => {
+    let panjangData = dates.length;
     let resultAll = [];
     let result = [];
 
@@ -20,7 +20,7 @@ const dates = [
         // return dates[3];
         for (let i = 0; i < panjangData; i++)
         {
-            resultAll[i] = Date.parse(data[i]);
+            resultAll[i] = Date.parse(dates[i]);
 
             resultAll[i] = resultAll[i]/1000; //second
 
@@ -34,7 +34,7 @@ const dates = [
     {
         // return data[posisi]/1000;
 
-        return (Date.parse(data[posisi])/1000).toString();
+        return (Date.parse(dates[posisi])/1000).toString();
     }
   }
   
