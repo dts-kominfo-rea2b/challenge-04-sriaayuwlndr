@@ -27,14 +27,14 @@ const dates = [
             result[i] = resultAll[i];
         }
 
-        return result.join("-");
+        return "'"+result.join("-")+"'";
     }
 
     else
     {
         // return data[posisi]/1000;
 
-        return Date.parse(data[posisi])/1000;
+        return "'"+Date.parse(data[posisi])/1000+"'";
     }
   }
   
