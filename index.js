@@ -24,10 +24,16 @@ const dates = [
 
             resultAll[i] = resultAll[i]/1000; //second
 
+            // resultAll[i] = resultAll[i].sort();
             result[i] = resultAll[i].toString();
+            // result[i] = result[i];
+            // result[i] = result[i].sort();
         }
 
-        return result.join("-");
+        // return result.join("-");
+        // return resultAll;
+        return (result.sort()).join("-");
+        // return result;
     }
 
     else
