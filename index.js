@@ -7,8 +7,48 @@ const dates = [
   "2020-02-03 UTC+7", // 1580662800 (epoch time, dalam detik)
 ];
 
+// console.log(dates);
+
+
 // TODO: Buatlah fungsi createDate
-const createDate = null;
+const createDate = (data,posisi) => {
+
+  let panjangData = data.length;
+  let resultAll = [];
+  let resultBerdasarkanPosisi = [];
+  
+
+  //SEMUA DATA
+  for (let i = 0; i < panjangData; i++)
+  {
+    resultAll[i] = Date.parse(data[i]);
+    
+    resultAll[i] = resultAll[i]/1000;
+    
+
+    // console.log(resultAll[i]);
+  }
+
+  // for (let i = posisi; i == posisi; i++)
+  // {
+  //   resultBerdasarkanPosisi[i] = Date.parse(data[i]);
+    
+  //   resultBerdasarkanPosisi[i] = resultBerdasarkanPosisi[i]/1000;
+    
+
+  //   // console.log(resultAll[i]);
+  // }
+
+  // DATA BERDASARKAN POSISI
+  // let resultBerdasarkanPosisi = "";
+  resultBerdasarkanPosisi[posisi] = Date.parse(data[posisi]);
+  resultBerdasarkanPosisi[posisi] = resultBerdasarkanPosisi[posisi]/1000;
+// console.log(resultBerdasarkanPosisi[posisi]);
+
+
+
+  return {resultAll, resultBerdasarkanPosisi};
+}
 
 // ! JANGAN DIMODIFIKASI
 (() => {
